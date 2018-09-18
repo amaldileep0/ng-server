@@ -1,0 +1,2 @@
+2018-09-18 10:28:30 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:23

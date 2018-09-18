@@ -1,0 +1,12 @@
+{
+  "environment": {
+    "debug": true,
+    "debugAccount": true,
+    "debugAdmin": true,
+    "debugNotSignedIn": false,
+    "env": "prod",
+    "timezone": "UTC"
+  }
+}
+
+
