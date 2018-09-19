@@ -30,7 +30,7 @@ class ApiAuth extends AuthMethod
             }
                 return null;
         } else {
-            throw new \yii\web\HttpException(500);
+            throw new yii\web\BadRequestHttpException;
         }
     }
 

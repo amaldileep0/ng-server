@@ -3280,3 +3280,1565 @@ $_SERVER = [
     'BACKEND_URL' => ''
     'ADMIN_EMAIL' => 'admin@example.com'
 ]
+2018-09-19 04:07:19 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:62
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionIndex()
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#7 {main}
+2018-09-19 04:07:19 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '45020'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330038.688
+    'REQUEST_TIME' => 1537330038
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:07:19 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#2 {main}
+2018-09-19 04:07:19 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://ng-server.api.com/'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '45020'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330039.963
+    'REQUEST_TIME' => 1537330039
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:07:38 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:62
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionIndex()
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#7 {main}
+2018-09-19 04:07:38 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '45808'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330058.234
+    'REQUEST_TIME' => 1537330058
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:07:39 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:62
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionIndex()
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#7 {main}
+2018-09-19 04:07:39 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '45808'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330059.439
+    'REQUEST_TIME' => 1537330059
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:07:51 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:62
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionIndex()
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account', Array)
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#7 {main}
+2018-09-19 04:07:51 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '46360'
+    'REDIRECT_URL' => '/v1/account'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330071.109
+    'REQUEST_TIME' => 1537330071
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:07:55 [192.168.10.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:62
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AccountController->actionIndex()
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/', Array)
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#7 {main}
+2018-09-19 04:07:55 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '46360'
+    'REDIRECT_URL' => '/v1/account/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330075.181
+    'REQUEST_TIME' => 1537330075
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:08:04 [192.168.10.1][-][-][error][yii\web\HttpException:500] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:08:04 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '47076'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330084.175
+    'REQUEST_TIME' => 1537330084
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:10:59 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:10:59 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '53396'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330259.595
+    'REQUEST_TIME' => 1537330259
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:11:43 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:11:43 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '54348'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330303.184
+    'REQUEST_TIME' => 1537330303
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:15:48 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:15:48 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NmNTYwNDjctOTE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => '43b05d5c-eca9-42f4-8f0b-c2ce15e5231e'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '60484'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330548.858
+    'REQUEST_TIME' => 1537330548
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:16:44 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:16:44 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '33944'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330604.264
+    'REQUEST_TIME' => 1537330604
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:16:46 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\HttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:16:46 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '34072'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330606.698
+    'REQUEST_TIME' => 1537330606
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:21:38 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:21:38 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '43196'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330898.028
+    'REQUEST_TIME' => 1537330898
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:21:51 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:21:51 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NmNTYwNDctOTE57MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => 'aa0a5632-96b5-4cc5-a47a-2d400f114fd8'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '43786'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330911.402
+    'REQUEST_TIME' => 1537330911
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:22:25 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:22:25 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NmNTYwNDctO5TE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => '0441bc3e-1c36-46ed-bb22-13366d85f64d'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=4cHnauC4u5RcyNsY6JkzX8cfeL1PM4sJ'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '44442'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537330945.705
+    'REQUEST_TIME' => 1537330945
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:31:17 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:31:17 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '34186'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331477.306
+    'REQUEST_TIME' => 1537331477
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:32:10 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:32:10 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '35840'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331530.518
+    'REQUEST_TIME' => 1537331530
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:32:22 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:32:22 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NbmNTYwNDctOTE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => 'f811ff27-583d-4a8c-9e20-9a4f94fabb52'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '36348'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331542.578
+    'REQUEST_TIME' => 1537331542
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:32:36 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:32:36 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NbmNTYwNDctOTE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => 'ef18d224-8173-41ae-9a22-dd75bd646db3'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '37092'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331556.907
+    'REQUEST_TIME' => 1537331556
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:32:40 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:32:40 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NbmNTYwNDctOTE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => '8bf28b87-2b2b-4a64-84fd-aa1f7555c38c'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '37196'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331560.781
+    'REQUEST_TIME' => 1537331560
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:32:49 [192.168.10.1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:43
+Stack trace:
+#0 /var/www/ng-service-system/dev/api/components/ApiAuth.php(23): api\components\ApiAuth->handleFailure(Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#10 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#12 {main}
+2018-09-19 04:32:49 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_TOKEN' => 'M2NbmNTYwNDctOTE5MC0xMWU4LTg2ZGYtMzJhMjMxYTE4NzRj'
+    'HTTP_TIMEZONE' => 'asia/kolkota'
+    'HTTP_POSTMAN_TOKEN' => '579d9853-c101-469f-892b-00ad36526890'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.3.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_COOKIE' => '_csrf=GZ4TA7FTxc6HK9-Sx--PmU_VAHwo2Aq5'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '37948'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331569.88
+    'REQUEST_TIME' => 1537331569
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:35:07 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:35:07 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '44182'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537331707.857
+    'REQUEST_TIME' => 1537331707
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-19 04:50:33 [192.168.10.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' in /var/www/ng-service-system/dev/api/components/ApiAuth.php:33
+Stack trace:
+#0 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(62): api\components\ApiAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#1 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#8 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/account/logo...', Array)
+#9 /var/www/ng-service-system/dev/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/ng-service-system/dev/api/web/index.php(35): yii\base\Application->run()
+#11 {main}
+2018-09-19 04:50:33 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '48808'
+    'REDIRECT_URL' => '/v1/account/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/logout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537332633.81
+    'REQUEST_TIME' => 1537332633
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]

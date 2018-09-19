@@ -25,8 +25,18 @@ return [
         ],
         'response' => [
             'class' => 'yii\web\Response',
-            'format' => yii\web\Response::FORMAT_JSON
+            'format' => yii\web\Response::FORMAT_JSON,
+            'on beforeSend' => function ($event) {
+                $response = $event->sender;
+                if ($response->data !== null) {
+                    $response->data = [
+                        'success' => $response->isSuccessful,
+                        'data' => $response->data,
+                    ];
+                }
+            },
         ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

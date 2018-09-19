@@ -1,2 +1,16 @@
 2018-09-18 10:28:30 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
     in /var/www/ng-service-system/dev/api/components/ApiAuth.php:23
+2018-09-19 04:15:48 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:21:51 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:22:25 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:32:22 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:32:36 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:32:40 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22
+2018-09-19 04:32:49 [192.168.10.1][-][-][info][api_request] AuthToken is missing/Invalid
+    in /var/www/ng-service-system/dev/api/components/ApiAuth.php:22

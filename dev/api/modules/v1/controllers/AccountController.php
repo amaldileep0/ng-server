@@ -3,7 +3,6 @@
 namespace api\modules\v1\controllers;
 
 use yii;
-use api\modules\v1\components\responses\ApiResponse;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\ContentNegotiator;
 use yii\filters\AccessControl;
@@ -77,7 +76,7 @@ class AccountController extends \yii\rest\Controller
 
     public function actionLogout() 
     {
-
+        die('dead');
     }
     public function actionResetPassword()
     {
