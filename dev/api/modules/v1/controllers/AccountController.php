@@ -51,6 +51,12 @@ class AccountController extends ApiBaseController
         throw new \yii\web\HttpException(404);
 	}
 
+    /**
+     * Action checks user authentication and perfom login
+     * @param string $username
+     * @param string $password
+     * @return string|Response
+     */
     public function actionLogin()
     {   
         $model = new LoginForm();

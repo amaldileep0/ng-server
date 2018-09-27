@@ -21,7 +21,7 @@ class Jwt extends BaseObject
     * $payload : Create token payload as a JSON string 
     */
     function createJwt($payload=[])
-    {
+    {   
         // Create token header as a JSON string
         $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
         // Encode Header to Base64Url String
