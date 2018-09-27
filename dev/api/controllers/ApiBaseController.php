@@ -6,9 +6,14 @@ use yii\filters\ContentNegotiator;
 use yii\helpers\ArrayHelper;
 use api\components\ApiAuth;
 use yii\web\Response;
+use yii;
 
 class ApiBaseController extends \yii\rest\Controller
-{
+{   
+    public $statusCode;
+    public $data;
+    public $message = "";
+
     /*
     * Set JSON as default API format
     */
@@ -23,9 +28,13 @@ class ApiBaseController extends \yii\rest\Controller
                         'application/json' => Response::FORMAT_JSON,
                     ],
                 ],
-                'authenticator' => [
-                    'class' => ApiAuth::className(),
-                ],
+                    'corsFilter' => [
+                        'class' => \yii\filters\Cors::className(),
+                    ],
+                    'authenticator' => [
+                        'class' => ApiAuth::className(),
+                        'except' =>['login']
+                    ],
             ]
         );
     }

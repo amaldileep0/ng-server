@@ -31,7 +31,7 @@ return [
                 if ($response->data !== null) {
                     $response->data = [
                         'success' => $response->isSuccessful,
-                        'data' => $response->data,
+                        'body' => $response->data,
                     ];
                 }
             },

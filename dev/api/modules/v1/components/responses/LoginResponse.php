@@ -7,7 +7,7 @@ class LoginResponse implements \JsonSerializable
     public $token;
 
     public function __construct($token = '', $screenName = '')
-    {
+    {   
         $this->token = $token;
     }
     /**

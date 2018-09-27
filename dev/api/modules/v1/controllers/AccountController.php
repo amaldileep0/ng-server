@@ -3,34 +3,22 @@
 namespace api\modules\v1\controllers;
 
 use yii;
-use yii\filters\auth\HttpBearerAuth;
-use yii\filters\ContentNegotiator;
-use yii\filters\AccessControl;
-use api\components\ApiAuth;
 use yii\helpers\ArrayHelper;
 use common\models\LoginForm;
-use yii\web\Response;
-
+use api\controllers\ApiBaseController;
+use yii\filters\AccessControl;
+use api\modules\v1\components\responses\ApiResponse;
 /**
  * Default controller for the `v1` module
  */
-class AccountController extends \yii\rest\Controller
+class AccountController extends ApiBaseController
 {	
+
 	public function behaviors()
     {
         return ArrayHelper::merge(
             parent::behaviors(),
             [
-                'bootstrap'=> [
-                        'class' => ContentNegotiator::className(),
-                    'formats' => [
-                        'application/json' => Response::FORMAT_JSON,
-                    ],
-                ],
-                'authenticator' => [
-                    'class' => ApiAuth::className(),
-                    'only' => ['logout']
-                ],
                 'verbs' => [
                     'class' => \yii\filters\VerbFilter::className(),
                     'actions' => [
@@ -48,7 +36,8 @@ class AccountController extends \yii\rest\Controller
                             'roles' => ['@'],
                         ],
                     ],
-                ]
+                ],
+                 
             ]
         );
     }
@@ -62,16 +51,20 @@ class AccountController extends \yii\rest\Controller
 	}
 
     public function actionLogin()
-    {
+    {   
         $model = new LoginForm();
+        $obj = new \stdClass();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-            return [
-                'token' => Yii::$app->user->identity->token->token
-            ];
+            $obj->token = Yii::$app->user->identity->token->token;
+            $this->statusCode = 200;
+            $this->data = $obj;
+            $this->message = "Login Successfull.";
         } else {
-            $model->validate();
-            return $model;
+            $this->statusCode = 400;
+            $this->data = null;
+            $this->message = "Incorrect username or password.";
         }
+        return new ApiResponse($this->statusCode, $this->data, $this->message);
     }
 
     public function actionLogout() 
