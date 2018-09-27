@@ -6872,3 +6872,1440 @@ $_SERVER = [
     'BACKEND_URL' => ''
     'ADMIN_EMAIL' => 'admin@example.com'
 ]
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'accept, content-type'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '54244'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538046930.782
+    'REQUEST_TIME' => 1538046930
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:15:30 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:15:30 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '37'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '54246'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538046930.796
+    'REQUEST_TIME' => 1538046930
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:19:27 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='dsf') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:19:27 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '34344'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538047167.838
+    'REQUEST_TIME' => 1538047167
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'accept, content-type'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42140'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048135.773
+    'REQUEST_TIME' => 1538048135
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:35 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:35 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42142'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048135.8
+    'REQUEST_TIME' => 1538048135
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42230'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048137.523
+    'REQUEST_TIME' => 1538048137
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42290'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048137.771
+    'REQUEST_TIME' => 1538048137
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:37 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:37 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42314'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048137.964
+    'REQUEST_TIME' => 1538048137
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42376'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048138.163
+    'REQUEST_TIME' => 1538048138
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42388'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048138.339
+    'REQUEST_TIME' => 1538048138
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:38 [192.168.10.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='test') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:38 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '38'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42412'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048138.5
+    'REQUEST_TIME' => 1538048138
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:35:52 [192.168.10.1][1][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='amaldileep@digitalmesh.com') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\web\User::login] User '1' logged in from 192.168.10.1. Session not enabled.
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:60
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:57
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user_token` WHERE `user_id`=1
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user_token`
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_token' AND kcu.table_name = 'user_token'
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:35:52 [192.168.10.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '64'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '42806'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048152.035
+    'REQUEST_TIME' => 1538048152
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:37:23 [192.168.10.1][1][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='amaldileep@digitalmesh.com') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\web\User::login] User '1' logged in from 192.168.10.1. Session not enabled.
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:60
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:57
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user_token` WHERE `user_id`=1
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user_token`
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_token' AND kcu.table_name = 'user_token'
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:37:23 [192.168.10.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '64'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '45278'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048243.28
+    'REQUEST_TIME' => 1538048243
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:38:38 [192.168.10.1][1][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='amaldileep@digitalmesh.com') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:38:39 [192.168.10.1][1][-][info][yii\web\User::login] User '1' logged in from 192.168.10.1. Session not enabled.
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:60
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:57
+2018-09-27 11:38:39 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user_token` WHERE `user_id`=1
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:38:39 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user_token`
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:38:39 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_token' AND kcu.table_name = 'user_token'
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:38:38 [192.168.10.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '64'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '47304'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048318.889
+    'REQUEST_TIME' => 1538048318
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\web\UrlManager::parseRequest] No matching URL rules. Using default URL parsing logic.
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/account/login'
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\base\Module::getModule] Loading module: v1
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\base\Controller::runAction] Route to run: v1/account/login
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2018-09-27 11:39:25 [192.168.10.1][1][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AccountController::actionLogin()
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=ng-project
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`email`='amaldileep@digitalmesh.com') AND (`status`=1)
+    in /var/www/ng-service-system/dev/common/models/User.php:90
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:74
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:41
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\web\User::login] User '1' logged in from 192.168.10.1. Session not enabled.
+    in /var/www/ng-service-system/dev/common/models/LoginForm.php:60
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:57
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT * FROM `user_token` WHERE `user_id`=1
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user_token`
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_token' AND kcu.table_name = 'user_token'
+    in /var/www/ng-service-system/dev/common/models/Query/UserTokenQuery.php:32
+    in /var/www/ng-service-system/dev/api/modules/v1/controllers/AccountController.php:58
+2018-09-27 11:39:25 [192.168.10.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_LENGTH' => '64'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_ORIGIN' => 'http://localhost:4200'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_REFERER' => 'http://localhost:4200/login'
+    'HTTP_ACCEPT_ENCODING' => 'identity,gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_HOST' => 'ng-server.api.com'
+    'HTTP_VIA' => '1.0 sez-gw-02.sez.digitalmesh.com (squid/3.5.20)'
+    'HTTP_CACHE_CONTROL' => 'max-age=259200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ng-server.api.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ng-server.api.com'
+    'SERVER_ADDR' => '192.168.10.145'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/ng-service-system/dev/api/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/var/www/ng-service-system/dev/api/web/index.php'
+    'REMOTE_PORT' => '48832'
+    'REDIRECT_URL' => '/v1/account/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/account/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1538048365.355
+    'REQUEST_TIME' => 1538048365
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'dev'
+    'MYSQL_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=ng-project'
+    'MYSQL_USERNAME' => 'root'
+    'MYSQL_PASSWORD' => 'pass'
+    'FRONTEND_URL' => ''
+    'BACKEND_URL' => ''
+    'ADMIN_EMAIL' => 'admin@example.com'
+]
