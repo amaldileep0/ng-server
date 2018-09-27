@@ -23,5 +23,8 @@ return [
             // uncomment if you want to cache RBAC items hierarchy
             // 'cache' => 'cache',
         ],
+        'jwt' => [
+            'class' => 'common\components\Jwt'
+        ],
     ],
 ];

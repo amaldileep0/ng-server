@@ -6,6 +6,9 @@
     "debugNotSignedIn": false,
     "env": "prod",
     "timezone": "UTC"
+  },
+  "jwt":{
+  	"key": "martinlutherking"
   }
 }
 

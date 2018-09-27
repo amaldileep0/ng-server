@@ -8,6 +8,7 @@ use common\models\LoginForm;
 use api\controllers\ApiBaseController;
 use yii\filters\AccessControl;
 use api\modules\v1\components\responses\ApiResponse;
+
 /**
  * Default controller for the `v1` module
  */
@@ -53,11 +54,18 @@ class AccountController extends ApiBaseController
     public function actionLogin()
     {   
         $model = new LoginForm();
-        $obj = new \stdClass();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-            $obj->token = Yii::$app->user->identity->token->token;
+            $user = Yii::$app->user->identity;
+            $data = [
+                'id' => $user->id,
+                'username' => $user->email,
+                'firstName' => $user->first_name,
+                'lastName' => $user->last_name,
+                'token' => $user->token->token
+            ];
+            
             $this->statusCode = 200;
-            $this->data = $obj;
+            $this->data = yii::$app->jwt->createJwt(json_encode($data));
             $this->message = "Login Successfull.";
         } else {
             $this->statusCode = 400;
