@@ -19,13 +19,13 @@ export class AuthenticationService {
     }
     login(username: string, password: string) {
         return this.http.post<any>(`http://ng-server.api.com/v1/account/login`, { username: username, password: password },this.httpOptions)
-            .pipe(map(user => {
+            .pipe(map((user: any) => {
                 // login successful if there's a jwt token in the response
-                //  if (user && user.token) {
-                //      // store user details and jwt token in local storage to keep user logged in between page refreshes
-                //     localStorage.setItem('currentUser', JSON.stringify(user));
-                // }
-                 return user;
+                 if (user &&  user.success) {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                }
+                return user;
             })
         );
     }

@@ -61,18 +61,24 @@ class AccountController extends ApiBaseController
     {   
         $model = new LoginForm();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-            $user = Yii::$app->user->identity;
-            $data = [
-                'id' => $user->id,
-                'username' => $user->email,
-                'firstName' => $user->first_name,
-                'lastName' => $user->last_name,
-                'token' => $user->token->token
-            ];
-            
-            $this->statusCode = 200;
-            $this->data = yii::$app->jwt->createJwt(json_encode($data));
-            $this->message = "Login Successfull.";
+
+            if (yii::$app->user->can("admin")) {
+                $user = Yii::$app->user->identity;
+                $data = [
+                    'id' => $user->id,
+                    'username' => $user->email,
+                    'firstName' => $user->first_name,
+                    'lastName' => $user->last_name,
+                    'token' => $user->token->token
+                ];
+                $this->statusCode = 200;
+                $this->data = yii::$app->jwt->createJwt(json_encode($data));
+                $this->message = "Login Successfull.";
+            } else {
+                $this->statusCode = 400;
+                $this->data = null;
+                $this->message = "Incorrect username or password.";
+            }
         } else {
             $this->statusCode = 400;
             $this->data = null;

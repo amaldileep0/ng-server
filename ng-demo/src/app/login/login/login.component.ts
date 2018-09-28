@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MessageService } from "../_services/message.service";
-import { AuthenticationService } from "../_services/authentication.service";
+import { MessageService } from "../../_services/message.service";
+import { AuthenticationService } from "../../_services/authentication.service";
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   ngOnInit() {
+    document.body.className = "hold-transition login-page";
     this.loginForm = this.formBuilder.group({
       username:['', Validators.required],
       password:['', Validators.required]
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
+              console.log(data)
                 this.router.navigate([this.returnUrl]);
             },
             error => {
