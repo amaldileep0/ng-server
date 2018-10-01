@@ -6,7 +6,6 @@ use yii;
 use yii\helpers\ArrayHelper;
 use common\models\LoginForm;
 use api\controllers\ApiBaseController;
-use yii\filters\AccessControl;
 use api\modules\v1\components\responses\ApiResponse;
 
 /**
@@ -14,33 +13,18 @@ use api\modules\v1\components\responses\ApiResponse;
  */
 class AccountController extends ApiBaseController
 {	
-
-	public function behaviors()
+    
+    public function behaviors()
     {
-        return ArrayHelper::merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => \yii\filters\VerbFilter::className(),
-                    'actions' => [
-                        'login' => ['POST'],
-                        'logout' => ['POST'],
-                    ]
-                ],
-                'access' => [
-                    'class' => AccessControl::className(),
-                    'only' => ['logout'],
-                    'rules' => [
-                        [
-                            'actions' => ['logout'],
-                            'allow' => true,
-                            'roles' => ['@'],
-                        ],
-                    ],
-                ],
-                 
+        $behaviors = parent::behaviors();
+        $behaviors['verbs'] = [
+            'class' => \yii\filters\VerbFilter::className(),
+            'actions' => [
+                'login' => ['POST'],
+                'logout' => ['POST'],
             ]
-        );
+        ];
+        return $behaviors;
     }
 
     /*
@@ -61,7 +45,6 @@ class AccountController extends ApiBaseController
     {   
         $model = new LoginForm();
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-
             if (yii::$app->user->can("admin")) {
                 $user = Yii::$app->user->identity;
                 $data = [
@@ -88,8 +71,10 @@ class AccountController extends ApiBaseController
     }
 
     public function actionLogout() 
-    {
-        die('dead');
+    {   
+        Yii::$app->user->logout();
+        $this->statusCode = 200;
+        return new ApiResponse($this->statusCode);
     }
     public function actionResetPassword()
     {

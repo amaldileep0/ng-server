@@ -21,7 +21,7 @@ class ApiRequestHandler extends Component
     * @var array $headerKey stores the header keys
     */
     private $headerKey = array(
-        "timeZone"
+        "timezone"
         );
     /**
     * This method checks post and  calls corresponding functions

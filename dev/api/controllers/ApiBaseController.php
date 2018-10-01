@@ -14,28 +14,40 @@ class ApiBaseController extends \yii\rest\Controller
     public $data;
     public $message = "";
 
-    /*
-    * Set JSON as default API format
-    */
     public function behaviors()
     {
-        return ArrayHelper::merge(
-            parent::behaviors(),
-            [
-                'bootstrap'=> [
-                        'class' => ContentNegotiator::className(),
-                    'formats' => [
-                        'application/json' => Response::FORMAT_JSON,
-                    ],
-                ],
-                    'corsFilter' => [
-                        'class' => \yii\filters\Cors::className(),
-                    ],
-                    'authenticator' => [
-                        'class' => ApiAuth::className(),
-                        'except' =>['login']
-                    ],
-            ]
-        );
+        $behaviors = parent::behaviors();
+        // remove authentication filter
+        $auth = $behaviors['authenticator'];
+        unset($behaviors['authenticator']);
+        // add CORS filter
+        $behaviors['corsFilter'] = [
+            'class' => \yii\filters\Cors::className(),
+            'cors' => [
+                // restrict access to
+                'Origin' => ['http://localhost:4200'], 
+                // Allow only POST and PUT methods
+                'Access-Control-Request-Method' => ['GET', 'POST', 'OPTIONS'],
+                 // Allow only headers 'X-Wsse'
+                'Access-Control-Request-Headers' => ['*'],
+                // Allow credentials (cookies, authorization headers, etc.) to be exposed to the browser
+                'Access-Control-Allow-Credentials' => false,
+                // Allow the X-Pagination-Current-Page header to be exposed to the browser.
+                'Access-Control-Expose-Headers' => ['X-Pagination-Current-Page'],
+            ],
+        ];
+        $behaviors['bootstrap'] = [
+            'class' => ContentNegotiator::className(),
+            'formats' => [
+                'application/json' => Response::FORMAT_JSON,
+            ],
+        ];
+        //re-add authentication filter
+        $behaviors['authenticator'] = [
+            'class' => ApiAuth::className()
+        ];
+        // avoid authentication on CORS-pre-flight requests (HTTP OPTIONS method)
+        $behaviors['authenticator']['except'] = ['options', 'login'];
+        return $behaviors;
     }
 }

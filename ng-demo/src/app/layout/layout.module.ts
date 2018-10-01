@@ -5,9 +5,12 @@ import { AsidenavbarComponent } from './asidenavbar/asidenavbar.component';
 import { FooternavbarComponent } from './footernavbar/footernavbar.component';
 import { SettingsnavbarComponent } from './settingsnavbar/settingsnavbar.component';
 
+import { LayoutRoutingModule } from './layout-routing.module';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    LayoutRoutingModule
   ],
   declarations: [
     TopnavbarComponent,
@@ -19,7 +22,10 @@ import { SettingsnavbarComponent } from './settingsnavbar/settingsnavbar.compone
     TopnavbarComponent,
     AsidenavbarComponent,
     FooternavbarComponent,
-    SettingsnavbarComponent
+    SettingsnavbarComponent,
   ]
 })
 export class LayoutModule { }
+
+
+

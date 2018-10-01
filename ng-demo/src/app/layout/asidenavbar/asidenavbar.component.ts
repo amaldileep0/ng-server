@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from "../../_models/user";
+import { JwtHelperService } from '@auth0/angular-jwt';
+
+const helper = new JwtHelperService();
 
 @Component({
   selector: 'app-asidenavbar',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsidenavbarComponent implements OnInit {
 
-  constructor() { }
+  currentUser: User;
+  constructor() { 
+      let rawToken = JSON.parse(localStorage.getItem('currentUser'));
+      this.currentUser = helper.decodeToken(rawToken);
+  }
 
   ngOnInit() {
   }

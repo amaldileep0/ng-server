@@ -3,6 +3,10 @@ import { HttpClient} from '@angular/common/http';
 import { map} from 'rxjs/operators';
 import { HttpHeaders} from '@angular/common/http';
 
+interface logoutStatus {
+    success:boolean
+    message: string
+}
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +15,10 @@ import { HttpHeaders} from '@angular/common/http';
 export class AuthenticationService {
   public httpOptions;
     constructor(private http: HttpClient) {
-        const httpOptions = {
+        this.httpOptions = {
             headers: new HttpHeaders({
-            'timeZone': 'asia\kolkota'
+            'Content-Type': 'application/json',
+            'timezone': 'asia/kolkota',
             })
         };
     }
@@ -23,9 +28,20 @@ export class AuthenticationService {
                 // login successful if there's a jwt token in the response
                  if (user &&  user.success) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    localStorage.setItem('currentUser', JSON.stringify(user.body.data));
                 }
                 return user;
+            })
+        );
+    }
+    logout() {
+        return this.http.post<logoutStatus>(`http://ng-server.api.com/v1/account/logout`,{}, this.httpOptions)
+        .pipe(map((response:any) =>{
+                if(response && response.success) {
+                    //removes user from local storage
+                    localStorage.removeItem('currentUser');
+                }
+                return response;
             })
         );
     }
