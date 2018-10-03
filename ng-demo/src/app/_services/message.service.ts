@@ -29,7 +29,7 @@ export class MessageService {
 
   error(message: any, keepAfterNavigationChange = false) {
       this.keepAfterNavigationChange = keepAfterNavigationChange;
-      this.subject.next({ type: 'error', text: message.error.body.message});
+      this.subject.next({ type: 'error', text: message});
   }
 
   getMessage(): Observable<any> {

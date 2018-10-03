@@ -3,7 +3,6 @@
 namespace api\modules\v1\controllers;
 
 use yii;
-use yii\helpers\ArrayHelper;
 use common\models\LoginForm;
 use api\controllers\ApiBaseController;
 use api\modules\v1\components\responses\ApiResponse;

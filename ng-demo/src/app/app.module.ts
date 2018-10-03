@@ -12,10 +12,13 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
 import { MessageService } from './_services/message.service';
 import { AuthenticationService } from './_services/authentication.service';
+import { UserComponent } from './user/user.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { AuthenticationService } from './_services/authentication.service';
     LoginModule,
     LogoutModule,
     LayoutModule,
+    AppRoutingModule,
     RouterModule.forRoot([])
   ],
   providers: [
