@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from "../_models/user";
 import { UserService } from "../_services/user.service";
-import { first } from "rxjs/operators";
 
 @Component({
   selector: 'app-user',
@@ -10,7 +9,7 @@ import { first } from "rxjs/operators";
 })
 export class UserComponent implements OnInit, OnDestroy {
 
-  users: User[];
+  users: User[]= [];
 
   constructor(private userService : UserService) { }
 
@@ -18,6 +17,7 @@ export class UserComponent implements OnInit, OnDestroy {
     document.body.className = "";
   }
   ngOnInit() {
+    window.dispatchEvent(new Event('resize'));
     document.body.className = "hold-transition skin-blue sidebar-mini";
     this.loadAllUsers();
   }

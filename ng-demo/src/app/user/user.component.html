@@ -35,12 +35,15 @@
                                 </tr>
                              </thead>
                              <tbody>
+                                <tr *ngIf="users.length === 0">
+                                  <td colspan="5">No records found</td>
+                                </tr>
                                 <tr role="row" class="odd" *ngFor="let user of users">
                                    <td class="sorting_1">{{user.id}}</td>
                                    <td>{{user.email}}</td>
-                                   <td>{{user.firstName}}</td>
-                                   <td>{{user.lastName}}</td>
-                                   <td>{{user.createdAt}}</td>
+                                   <td>{{user.firstName | titlecase}}</td>
+                                   <td>{{user.lastName | titlecase}}</td>
+                                   <td>{{user.createdAt | date:'medium'}}</td>
                                 </tr>
                              </tbody> 
                           </table>

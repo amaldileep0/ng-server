@@ -14,6 +14,7 @@ import { MessageService } from './_services/message.service';
 import { AuthenticationService } from './_services/authentication.service';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterModule, } from './register/register.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     LogoutModule,
     LayoutModule,
     AppRoutingModule,
+    RegisterModule,
     RouterModule.forRoot([])
   ],
   providers: [

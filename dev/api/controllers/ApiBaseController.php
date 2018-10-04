@@ -47,7 +47,7 @@ class ApiBaseController extends \yii\rest\Controller
             'class' => ApiAuth::className()
         ];
         // avoid authentication on CORS-pre-flight requests (HTTP OPTIONS method)
-        $behaviors['authenticator']['except'] = ['options', 'login'];
+        $behaviors['authenticator']['except'] = ['options', 'login', 'register'];
         return $behaviors;
     }
 }

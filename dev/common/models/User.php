@@ -34,15 +34,19 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at'
+            ]
         ];
     }
-
+    
     /**
      * {@inheritdoc}
      */
@@ -77,6 +81,14 @@ class User extends ActiveRecord implements IdentityInterface
             ->where(['user_token.token'=> $token])
             ->andwhere(['user.status' => self::STATUS_ACTIVE ])
             ->one();
+    }
+    /**
+     * {@inheritdoc}
+     * @return \common\models\Query\UserTokenQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new \common\models\Query\UserQuery(get_called_class());
     }
     
     /**
