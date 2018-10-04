@@ -62,6 +62,9 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'rules'=>[
+                'v1/user/delete/<id:\d+>' => 'v1/user/delete',
+            ]
         ],     
     ],
     'params' => [

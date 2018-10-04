@@ -26,7 +26,6 @@ export class MessageService {
       this.keepAfterNavigationChange = keepAfterNavigationChange;
       this.subject.next({ type: 'success', text: message });
   }
-
   error(message: any, keepAfterNavigationChange = false) {
       this.keepAfterNavigationChange = keepAfterNavigationChange;
       this.subject.next({ type: 'error', text: message});

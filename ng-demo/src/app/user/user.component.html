@@ -27,11 +27,12 @@
                           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                              <thead>
                                 <tr role="row">
-                                   <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 288px;">User Id</th>
-                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 350px;">Email</th>
-                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 312px;">First Name</th>
-                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 248px;">Last Name</th>
-                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 184px;">Created At</th>
+                                   <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="descending" aria-label="Rendering engine: activate to sort column descending" style="width: 288px;">User Id</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 350px;">Email</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="First Name: activate to sort column ascending" style="width: 312px;">First Name</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Last Name : activate to sort column ascending" style="width: 248px;">Last Name</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Created At: activate to sort column ascending" style="width: 184px;">Created At</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 184px;">Actions</th>
                                 </tr>
                              </thead>
                              <tbody>
@@ -44,6 +45,11 @@
                                    <td>{{user.firstName | titlecase}}</td>
                                    <td>{{user.lastName | titlecase}}</td>
                                    <td>{{user.createdAt | date:'medium'}}</td>
+                                   <td>
+                                    <button class="btn btn-danger" (click)="deleteUser(user.id)"><span class="glyphicon glyphicon-trash"></span></button>
+                                    <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"><span class="glyphicon glyphicon-pencil"></span></button>
+                                    <button class="btn btn-info" (click)="viewUser(user)" style="margin-left: 20px;"><span class="glyphicon glyphicon-eye-open"></span></button>  
+                                  </td>
                                 </tr>
                              </tbody> 
                           </table>

@@ -23,5 +23,9 @@ export class UserService {
   registerUser(user: User){
     return this.http.post(`http://ng-server.api.com/v1/user/register`, user,this.httpOptions);
   }
+  deleteUser(id: number) {
+    const url = `${'http://ng-server.api.com/v1/user/delete'}/${id}`; 
+    return this.http.delete(url, this.httpOptions)
+  }
 
 }

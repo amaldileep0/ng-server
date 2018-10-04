@@ -9,6 +9,7 @@ use common\models\User;
 use api\controllers\ApiBaseController;
 use api\modules\v1\components\responses\ApiResponse;
 use common\models\RegisterForm;
+use yii\web\NotFoundHttpException;
 
 class UserController extends ApiBaseController
 {	
@@ -23,7 +24,8 @@ class UserController extends ApiBaseController
             'class' => \yii\filters\VerbFilter::className(),
             'actions' => [
                 'get-all-users' => ['GET'],
-                'register' => ['POST']
+                'register' => ['POST'],
+                'delete' => ['DELETE']
             ]
         ];
         return $behaviors;
@@ -65,7 +67,6 @@ class UserController extends ApiBaseController
 	{	
 		$return = [];
 		$model = new RegisterForm();
-		$post = Yii::$app->request->post();
 		if ($model->load(Yii::$app->getRequest()->getBodyParams(), '')) {
 			//$model->firstName = "";
 			if ($model->signup()) {
@@ -80,6 +81,25 @@ class UserController extends ApiBaseController
             }
 		} 
 		return new ApiResponse($this->statusCode,$this->data,$this->message); 
+	}
+	public function actionDelete($id)
+	{
+		$user = $this->findModel($id);
+		if($user->delete()){
+			$auth = \Yii::$app->authManager;
+			$auth->revokeAll($id);
+			$this->statusCode = 204;
+		} else {
+			$this->statusCode = 500;
+		}
+		return new ApiResponse($this->statusCode);
+	}
+	protected function findModel($id)
+	{
+		if (($model = User::findOne($id)) !== null) {
+			return $model;
+		}
+		throw new NotFoundHttpException('The requested page does not exist.');
 	}
 
 }
