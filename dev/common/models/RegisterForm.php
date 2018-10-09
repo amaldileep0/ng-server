@@ -26,7 +26,7 @@ class RegisterForm extends Model
             ['firstName', 'string', 'min' => 3, 'max' => 255],
             ['lastName', 'trim'],
             ['lastName', 'required'],
-            ['lastName', 'string', 'min' => 3, 'max' => 255],
+            ['lastName', 'string', 'min' => 1, 'max' => 255],
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],

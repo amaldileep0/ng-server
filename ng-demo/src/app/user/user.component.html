@@ -46,7 +46,7 @@
                                    <td>{{user.lastName | titlecase}}</td>
                                    <td>{{user.createdAt | date:'medium'}}</td>
                                    <td>
-                                    <button class="btn btn-danger" (click)="deleteUser(user.id)"><span class="glyphicon glyphicon-trash"></span></button>
+                                    <button class="btn btn-danger" (click)="deleteUser(user)"><span class="glyphicon glyphicon-trash"></span></button>
                                     <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"><span class="glyphicon glyphicon-pencil"></span></button>
                                     <button class="btn btn-info" (click)="viewUser(user)" style="margin-left: 20px;"><span class="glyphicon glyphicon-eye-open"></span></button>  
                                   </td>

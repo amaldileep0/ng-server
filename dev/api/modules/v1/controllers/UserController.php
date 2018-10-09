@@ -25,7 +25,9 @@ class UserController extends ApiBaseController
             'actions' => [
                 'get-all-users' => ['GET'],
                 'register' => ['POST'],
-                'delete' => ['DELETE']
+                'get-user' => ['GET'],
+                'delete' => ['DELETE'],
+                'edit' => ['POST']
             ]
         ];
         return $behaviors;
@@ -52,6 +54,8 @@ class UserController extends ApiBaseController
 	        		$return['users'][$key]['lastName'] = $user['last_name'];
 	        		$return['users'][$key]['createdAt'] = date('d-M-Y H:i:s',$user['created_at']);
 	        	}
+	    	} else {
+	    		$return['users'] = [];
 	    	}
 	    	$this->statusCode = 200;
     		$this->data = $return;
@@ -85,7 +89,7 @@ class UserController extends ApiBaseController
 	public function actionDelete($id)
 	{
 		$user = $this->findModel($id);
-		if($user->delete()){
+		if($user->delete()) {
 			$auth = \Yii::$app->authManager;
 			$auth->revokeAll($id);
 			$this->statusCode = 204;
@@ -98,8 +102,65 @@ class UserController extends ApiBaseController
 	{
 		if (($model = User::findOne($id)) !== null) {
 			return $model;
+		} else {
+			return null;
 		}
-		throw new NotFoundHttpException('The requested page does not exist.');
+	}
+	public function actionGetUser($id)
+	{	
+		$return = [];
+		$user = $this->findModel($id);
+		if ($user) {
+			$return['user']['id'] = $user['id'];
+	        $return['user']['email'] = $user['email'];
+	        $return['user']['firstName'] = $user['first_name'];
+	        $return['user']['lastName'] = $user['last_name'];
+	        $this->statusCode = 200;
+	        $this->message = "";
+	        $this->data = $return;
+		} else {
+			$this->statusCode = 404;
+			$this->message = "The requested user does not exist.";
+			$this->data = new \stdClass();
+		}
+		return new ApiResponse($this->statusCode,$this->data,$this->message);
+	}
+	public function actionEdit()
+	{
+		$bodyparams = Yii::$app->getRequest()->getBodyParams();
+		if ($bodyparams['id']) {
+			$user = $this->findModel($bodyparams['id']);
+			if($user) {
+				$user->email = $bodyparams['email'];
+				$user->first_name = $bodyparams['firstName'];
+				$user->last_name = $bodyparams['lastName'];
+				if($user->update()){
+					$this->statusCode = 200;
+					$this->message = "Updated successful.";
+					$this->data = new \stdClass();
+				} else {
+					$error = $user->getErrors();
+					if ($error) {
+						$this->statusCode = 400;
+						$this->message = "Validation failed";
+						$this->data = ['error' => $error ];
+					} else {
+						$this->statusCode = 200;
+						$this->message = "Updated successful.";
+						$this->data = new \stdClass();
+					}
+				}
+			} else {
+				$this->statusCode = 404;
+				$this->message = "The requested user does not exist.";
+				$this->data = new \stdClass();
+			}
+		} else {
+			$this->statusCode = 400;
+			$this->message = "Parameter missing";
+			$this->data = new \stdClass();
+		}
+		return new ApiResponse($this->statusCode,$this->data,$this->message);
 	}
 
 }

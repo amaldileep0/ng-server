@@ -15,15 +15,22 @@ import { AuthenticationService } from './_services/authentication.service';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterModule, } from './register/register.module';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    EditUserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     DashboardModule,
     LoginModule,
     LogoutModule,
