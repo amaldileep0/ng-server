@@ -40,10 +40,10 @@
                             <div *ngIf=" submitted && registerForm.hasError('notSame')" class="has-error"><p class="help-block">Confirm password do not match</p></div>
                     </div>
                 </div>
-                    <button [disabled]="loading" class="btn rounded-btn">Register</button>
-                    <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+                    <button [disabled]="loading" class="btn rounded-btn">Register</button>&nbsp;
+                    <a [routerLink]="['/login']" class="btn rounded-btn">Cancel</a>
             </form>
-        <a class="btn rounded-btn" routerLink="/login">I already have a membership</a>
+        <a class="btn  btn-link" routerLink="/login">I already have a membership</a>
         </div>
     </div>
 </div>

@@ -54,7 +54,7 @@ export class SignupComponent implements OnInit {
                 .subscribe(
                     data => {
                         //show message
-                        //this.router.navigate([this.returnUrl]);
+                        this.router.navigate([this.returnUrl]);
                     },
                     error => {
                         //show message
