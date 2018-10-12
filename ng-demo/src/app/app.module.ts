@@ -18,6 +18,9 @@ import { RegisterModule, } from './register/register.module';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogService } from './_services/confirmation-dialoge.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,8 +28,10 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AppComponent,
     UserComponent,
     EditUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    ConfirmationDialogComponent
   ],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -37,15 +42,19 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     LayoutModule,
     AppRoutingModule,
     RegisterModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([])
+  ],
+  entryComponents: [ 
+    ConfirmationDialogComponent 
   ],
   providers: [
     AuthGuard,
     MessageService,
     AuthenticationService,
+    ConfirmationDialogService,
     { provide: HTTP_INTERCEPTORS, useClass:JwtInterceptor, multi:true },
     { provide: HTTP_INTERCEPTORS, useClass:ErrorInterceptor, multi:true },
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
 export class AppModule { }

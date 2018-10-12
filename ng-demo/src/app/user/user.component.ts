@@ -3,6 +3,7 @@ import { User } from "../_models/user";
 import { UserService } from "../_services/user.service";
 import { first } from 'rxjs/operators';
 import { Router } from "@angular/router";
+import { ConfirmationDialogService } from "../_services/confirmation-dialoge.service";
 
 @Component({
   selector: 'app-user',
@@ -13,7 +14,11 @@ export class UserComponent implements OnInit, OnDestroy {
 
   users: User[]= [];
 
-  constructor(private userService : UserService, private router: Router) { }
+  constructor(
+    private userService : UserService,
+    private router: Router,
+    private confirmationDialogService: ConfirmationDialogService
+  ) { }
 
   ngOnDestroy(): void {
     document.body.className = "";
@@ -23,11 +28,11 @@ export class UserComponent implements OnInit, OnDestroy {
     document.body.className = "hold-transition skin-blue sidebar-mini";
     this.loadAllUsers();
   }
+  
   deleteUser(user) {
-      this.userService.deleteUser(user.id).pipe(first()).subscribe(data => {
-          this.users = this.users.filter(u => u !== user);
-        });
+    this.confirmationDialogService.confirm('Please confirm..', 'Do you really want to ... ?')
   }
+  
   private loadAllUsers(){
     this.userService.getAllUsers().subscribe(
       (res: any) => {
