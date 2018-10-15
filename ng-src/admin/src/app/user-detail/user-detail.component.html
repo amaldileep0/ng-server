@@ -1,0 +1,29 @@
+<div [@routerTransition]>
+        <app-page-header [heading]="'User Detail'" [icon]="'fa-table'"></app-page-header>
+        <div class="row">
+            <div class="col col-xl-6 col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Details of {{user.firstName | titlecase}}
+                    </div>
+                    <div class="card-body table-responsive">
+                            <table class="table">
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td>{{user.firstName |titlecase}} {{user.lastName | titlecase}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{user.email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Created At</th>
+                                        <td>{{user.createdAt | date:'medium'}}</td>
+                                    </tr>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+                    

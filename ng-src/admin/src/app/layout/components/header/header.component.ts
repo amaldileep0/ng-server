@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { User } from "../../../models/user";
+
+
+const helper = new JwtHelperService();
 
 @Component({
     selector: 'app-header',
@@ -10,8 +15,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
     pushRightClass: string = 'push-right';
 
+    currentUser: User;
+
     constructor(private translate: TranslateService, public router: Router) {
 
+        let rawToken = JSON.parse(localStorage.getItem('_identity'));
+        this.currentUser = helper.decodeToken(rawToken);
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         this.translate.setDefaultLang('en');
         const browserLang = this.translate.getBrowserLang();
@@ -46,7 +55,7 @@ export class HeaderComponent implements OnInit {
     }
 
     onLoggedout() {
-        localStorage.removeItem('isLoggedin');
+        localStorage.removeItem('_identity');
     }
 
     changeLang(language: string) {

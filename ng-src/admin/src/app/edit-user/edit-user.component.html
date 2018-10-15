@@ -1,0 +1,40 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'User Edit'" [icon]="'fa-edit'"></app-page-header>
+    <div class="row">
+        <div class="col-lg-6">
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                <fieldset class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                            <input type="text" formControlName="email" placeholder="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                            <div *ngIf="submitted && f.email.errors" class="has-error">
+                                <div *ngIf="f.email.errors.required">
+                                    <p class="help-block help-block-error">Email cannot be blank</p>
+                                </div>
+                            </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="exampleInputEmail1">First Name</label>
+                      <input type="text" formControlName="firstName" placeholder="First Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                          <div *ngIf="submitted && f.firstName.errors" class="has-error">
+                              <div *ngIf="f.firstName.errors.required">
+                                    <p class="help-block help-block-error">First Name cannot be blank</p>
+                              </div>
+                          </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="exampleInputEmail1">Last Name</label>
+                            <input type="text" formControlName="lastName" placeholder="Last Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                            <div *ngIf="submitted && f.lastName.errors" class="has-error">
+                                <div *ngIf="f.lastName.errors.required">
+                                    <p class="help-block help-block-error">Last Name is required</p>
+                                </div>
+                            </div>
+                </fieldset>
+                <button [disabled]="loading" class="btn btn-success">Save</button>
+                &nbsp;<button type="reset" class="btn btn-primary">Reset Button</button>
+                &nbsp;<a [routerLink]="['/users']" class="btn btn-danger">Cancel</a>
+              </form>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>

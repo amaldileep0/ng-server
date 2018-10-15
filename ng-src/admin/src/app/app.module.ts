@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,6 +9,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { HeaderInterceptor } from './shared/helpers/header.interceptor';
+import { ErrorInterceptor } from './shared/helpers/error.interceptor';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ConfirmDilogComponent } from "./confirm-dilog/confirm-dilog.component";
+import { ConfirmService } from "./shared/services/confirm.service";
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -34,10 +39,17 @@ export const createTranslateLoader = (http: HttpClient) => {
                 deps: [HttpClient]
             }
         }),
+        NgbModule.forRoot(),
         AppRoutingModule
     ],
-    declarations: [AppComponent],
-    providers: [AuthGuard],
+    declarations: [AppComponent, ConfirmDilogComponent],
+    providers: [
+        AuthGuard,
+        ConfirmService,
+        { provide: HTTP_INTERCEPTORS, useClass:HeaderInterceptor, multi:true },
+        { provide: HTTP_INTERCEPTORS, useClass:ErrorInterceptor, multi:true}
+    ],
+    entryComponents: [ ConfirmDilogComponent ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

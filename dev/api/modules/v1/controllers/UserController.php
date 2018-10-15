@@ -115,6 +115,7 @@ class UserController extends ApiBaseController
 	        $return['user']['email'] = $user['email'];
 	        $return['user']['firstName'] = $user['first_name'];
 	        $return['user']['lastName'] = $user['last_name'];
+	        $return['user']['createdAt'] = date('d-M-Y H:i:s',$user['created_at']);
 	        $this->statusCode = 200;
 	        $this->message = "";
 	        $this->data = $return;

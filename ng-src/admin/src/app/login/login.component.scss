@@ -1,4 +1,4 @@
-$topnav-background-color: #222;
+$topnav-background-color: rgb(33, 88, 7);
 :host {
     display: block;
 }
@@ -102,30 +102,31 @@ $topnav-background-color: #222;
     .has-error.checkbox label,
     .has-error.radio-inline label,
     .has-error.checkbox-inline label {
-        color: #a94442;
+        color: #f52323;
+        font-size: 24px;
     }
     .has-error .form-control {
-        border-color: #fd0505;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        border-color: #f07d7d;
+        -webkit-box-shadow: inset 0 1px 1px rgba(247, 239, 239, 0.075);
                 box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     }
     .has-error .form-control:focus {
-        border-color: #fd0505;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
-                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+        border-color: #e0dede;;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #682020;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #682020;
     }
     .has-error .input-group-addon {
-        color: #fd0505;
-        background-color: #f2dede;
-        border-color: #fd0505;;
+        color: #fa0202;
+        background-color: #c0baba;;
+        border-color: #c2bfbf;;;
     }
     .has-error .form-control-feedback {
-         color: #fd0505;
+         color: #f80404;;
     }
     .help-block {
         display: block;
         margin-top: 5px;
         margin-bottom: 10px;
-        color:#212529
+        color:#646161;
     }
 }
