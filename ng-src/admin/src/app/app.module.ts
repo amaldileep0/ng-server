@@ -14,6 +14,7 @@ import { ErrorInterceptor } from './shared/helpers/error.interceptor';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ConfirmDilogComponent } from "./confirm-dilog/confirm-dilog.component";
 import { ConfirmService } from "./shared/services/confirm.service";
+import { MessageComponent } from './shared/modules/message/message.component';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -42,7 +43,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         NgbModule.forRoot(),
         AppRoutingModule
     ],
-    declarations: [AppComponent, ConfirmDilogComponent],
+    declarations: [AppComponent, ConfirmDilogComponent, MessageComponent],
     providers: [
         AuthGuard,
         ConfirmService,

@@ -72,7 +72,6 @@ class UserController extends ApiBaseController
 		$return = [];
 		$model = new RegisterForm();
 		if ($model->load(Yii::$app->getRequest()->getBodyParams(), '')) {
-			//$model->firstName = "";
 			if ($model->signup()) {
                 $this->statusCode = 200;
                 $this->data = $return;
