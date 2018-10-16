@@ -65,7 +65,7 @@ class UserController extends ApiBaseController
     		$this->data = $return;
     		$this->message = "Someting went wrong while fetching users.";
 		}
-    	return new ApiResponse($this->statusCode,$this->data,$this->message);
+    	return new ApiResponse($this->statusCode, $this->data, $this->message);
 	}
 	public function actionRegister()
 	{	

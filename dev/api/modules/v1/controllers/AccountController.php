@@ -43,6 +43,7 @@ class AccountController extends ApiBaseController
     public function actionLogin()
     {   
         $model = new LoginForm();
+        $returnError = [];
         if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
             if (yii::$app->user->can("admin")) {
                 $user = Yii::$app->user->identity;
@@ -59,12 +60,12 @@ class AccountController extends ApiBaseController
             } else {
                 $this->statusCode = 400;
                 $this->data = null;
-                $this->message = "Incorrect username or password.";
+                $this->message = "Incorrect username or password";
             }
         } else {
             $this->statusCode = 400;
             $this->data = null;
-            $this->message = "Incorrect username or password.";
+            $this->message = "Incorrect username or password";
         }
         return new ApiResponse($this->statusCode, $this->data, $this->message);
     }

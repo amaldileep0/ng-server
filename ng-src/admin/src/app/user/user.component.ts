@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { User } from "../models/user";
 import { UserService } from "../shared/services/user.service";
 import { first } from 'rxjs/operators';
@@ -12,7 +12,7 @@ import { ConfirmService } from "../shared/services/confirm.service";
   styleUrls: ['./user.component.scss'],
   animations: [routerTransition()]
 })
-export class UserComponent implements OnInit, OnDestroy {
+export class UserComponent implements OnInit {
 
   users: User[]= [];
 
@@ -22,12 +22,8 @@ export class UserComponent implements OnInit, OnDestroy {
     private confirmService : ConfirmService
   ) { }
 
-  ngOnDestroy(): void {
-    document.body.className = "";
-  }
   ngOnInit() {
     window.dispatchEvent(new Event('resize'));
-    document.body.className = "hold-transition skin-blue sidebar-mini";
     this.loadAllUsers();
   }
   

@@ -4,6 +4,7 @@ import { routerTransition } from '../router.animations';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AuthenticationService } from "../shared/services/authentication.service";
 import { first } from 'rxjs/operators';
+import { MessageService } from "../shared/services/message.service";
 
 
 @Component({
@@ -16,12 +17,14 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     submitted: boolean = false;
     returnUrl: string;
+    errorArray: Array<any> = [];
   
     constructor(  
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
-      private authenticationService : AuthenticationService
+      private authenticationService : AuthenticationService,
+      private messageService: MessageService
   ) {
       
     }
@@ -50,7 +53,8 @@ export class LoginComponent implements OnInit {
                   this.router.navigate([this.returnUrl]);
               },
               error => {
-                  //push to message service
+                  //fix it to handle array of errors
+                  this.messageService.sendMessage(error, 'danger');
               });
   }
   

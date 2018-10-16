@@ -50,6 +50,7 @@ export class EditUserComponent implements OnInit, OnDestroy {
     });
 
     this.userService.getUserById(+userId).subscribe( data => {
+      delete data.body.data.user.createdAt;
       this.editForm.setValue(data.body.data.user);
     });
   }
@@ -67,7 +68,6 @@ export class EditUserComponent implements OnInit, OnDestroy {
                     this.router.navigate(['/users']);
                 },
                 error => {
-                   //show error
                     this.loading = false;
                 });
   }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 
 const routes: Routes = [
@@ -10,7 +9,6 @@ const routes: Routes = [
     { path: 'users', loadChildren: './user/user.module#UserModule', canActivate:[AuthGuard]},
     { path: 'edit-user', loadChildren: './edit-user/edit-user.module#EditUserModule', canActivate:[AuthGuard]},
     { path: 'view', loadChildren: './user-detail/user-detail.module#UserDetailModule', canActivate:[AuthGuard]},
-
     { path: 'error', loadChildren: './server-error/server-error.module#ServerErrorModule' },
     { path: 'access-denied', loadChildren: './access-denied/access-denied.module#AccessDeniedModule' },
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },

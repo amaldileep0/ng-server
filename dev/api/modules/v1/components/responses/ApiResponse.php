@@ -9,13 +9,14 @@ class ApiResponse implements \JsonSerializable
     public $statusCode;
     public $data;
     public $message = "";
-    
+   
     public function __construct($status = null, $data = null, $message = "")
     {   
         Yii::$app->response->statusCode = $status;
         $this->statusCode = $status;
         $this->message = $message;
         $this->data = $data;
+        
     }
     public static function __set_state($data)
     {   
@@ -23,6 +24,7 @@ class ApiResponse implements \JsonSerializable
         $obj->data = $data["data"];
         $obj->message = $data["message"];
         $obj->statusCode = $data["statusCode"];
+        
         return $obj;
     }
 
@@ -37,7 +39,7 @@ class ApiResponse implements \JsonSerializable
         return [
             'statusCode' => $this->statusCode,
             'message' => $this->message,
-            'data' => $this->data       
+            'data' => $this->data
         ];
     }
 }

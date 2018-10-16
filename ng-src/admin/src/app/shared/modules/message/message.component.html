@@ -1,0 +1,7 @@
+<div *ngIf="alerts.length">
+        <div class="card-body">
+            <p *ngFor="let alert of alerts">
+                <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+            </p>
+        </div>
+</div>

@@ -13,6 +13,7 @@ class ApiBaseController extends \yii\rest\Controller
     public $statusCode;
     public $data;
     public $message = "";
+    public $error;
 
     public function behaviors()
     {
