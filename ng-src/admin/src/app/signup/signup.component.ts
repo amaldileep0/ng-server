@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { UserService } from "../shared/services/user.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { first } from "rxjs/operators";
+import { MessageService } from "../shared/services/message.service";
 
 @Component({
     selector: 'app-signup',
@@ -21,7 +22,8 @@ export class SignupComponent implements OnInit {
         private router: Router,
         private formBuilder: FormBuilder,
         private userService: UserService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private messageService: MessageService
     ) {}
 
      // convenience getter for easy access to form fields
@@ -57,7 +59,7 @@ export class SignupComponent implements OnInit {
                         this.router.navigate([this.returnUrl]);
                     },
                     error => {
-                        //show message
+                        this.messageService.sendMessage(error,'danger');
                     });
     }
 }

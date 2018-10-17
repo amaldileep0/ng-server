@@ -80,7 +80,7 @@ class UserController extends ApiBaseController
             	$return['error'] = $model->getErrors();
             	$this->statusCode = 400;
                 $this->data = $return;
-                $this->message = "";
+                $this->message = "Something went wrong while saving data";
             }
 		} 
 		return new ApiResponse($this->statusCode,$this->data,$this->message); 
