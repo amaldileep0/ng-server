@@ -44,14 +44,26 @@ export class EditUserComponent implements OnInit, OnDestroy {
     }
     this.editForm = this.formBuilder.group({
       id:[],
-      email:['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       firstName:['', Validators.required],
-      lastName:['', Validators.required]
+      lastName:['', Validators.required],
+      gender:['',Validators.required],
+      address:['',Validators.required],
+      age:[],
+      image:[],
+      dob:[]
     });
 
     this.userService.getUserById(+userId).subscribe( data => {
-      delete data.body.data.user.createdAt;
-      this.editForm.setValue(data.body.data.user);
+      let editUser = data.body.data.user;
+      delete editUser.createdAt;
+      let rawDate = editUser.dob;
+      if (rawDate) {
+        let myDate = new Date(rawDate);
+        let myDob = {year:myDate.getFullYear(),month:myDate.getMonth(), day:myDate.getDay()}
+        editUser.dob= myDob
+      }
+      this.editForm.setValue(editUser);
     });
   }
   onSubmit(){
@@ -61,7 +73,8 @@ export class EditUserComponent implements OnInit, OnDestroy {
         return;
     }
     this.loading = true;
-    this.userService.editUser(this.editForm.value)
+    let formData = this.editForm.value;
+    this.userService.editUser(formData)
             .pipe(first())
             .subscribe(
                 data => {

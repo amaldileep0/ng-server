@@ -20,6 +20,22 @@
                                         <th>Created At</th>
                                         <td>{{user.createdAt | date:'medium'}}</td>
                                     </tr>
+                                    <tr>
+                                            <th>Age</th>
+                                            <td>{{user.age}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Date of birth</th>
+                                            <td>{{user.dob | date:'fullDate'}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Gender</th>
+                                            <td>{{user.gender | uppercase}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Address</th>
+                                            <td>{{user.address}}</td>
+                                    </tr>
                             </table>
                         </div>
                 </div>

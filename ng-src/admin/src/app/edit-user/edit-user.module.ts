@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EditUserRoutingModule } from './edit-user-routing.module';
 import { EditUserComponent } from './edit-user.component';
@@ -11,7 +12,8 @@ import { PageHeaderModule } from '../shared';
     CommonModule,
     EditUserRoutingModule,
     ReactiveFormsModule,
-    PageHeaderModule
+    PageHeaderModule,
+    NgbModule
   ],
   declarations: [EditUserComponent]
 })

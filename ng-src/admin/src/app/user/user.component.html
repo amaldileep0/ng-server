@@ -1,4 +1,5 @@
 <div [@routerTransition]>
+        <app-page-header [heading]="'Users'" [icon]="'fa-edit'"></app-page-header>
   <div class="row">
       <div class="col col-xl-12 col-lg-12">
           <div class="card mb-3">
@@ -37,15 +38,15 @@
                           <td>{{item.lastName | titlecase}}</td>
                           <td>{{item.createdAt | date:'medium'}}</td>
                           <td>
-                            <button class="btn btn-success" (click)="editUser(item)" style="margin-left: 10px;">Edit</button>
-                            <button class="btn btn-info" (click)="viewUser(item)" style="margin-left: 10px;">View</button>  
-                            <button class="btn btn-danger" (click)="deleteUser(item)" style="margin-left: 10px">Delete</button>
+                            <button class="btn btn-success" (click)="editUser(item)" ngbTooltip="Edit user" style="margin-left: 10px;">Edit</button>
+                            <button class="btn btn-info" (click)="viewUser(item)" ngbTooltip="View user" style="margin-left: 10px;">View</button>  
+                            <button class="btn btn-danger" (click)="deleteUser(item)" ngbTooltip="Delete user" style="margin-left: 10px">Delete</button>
                          </td>
                     </tr>
                       </tbody>
                       <tfoot>
                       <tr>
-                          <td colspan="6" align="center">
+                          <td colspan="6" class="text-right">
                               <mfBootstrapPaginator></mfBootstrapPaginator>
                           </td>
                       </tr>

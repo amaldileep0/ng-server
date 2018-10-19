@@ -16,7 +16,6 @@ class ApiAuth extends AuthMethod
         $apirequestHandler->setRequestData();
         if ($apirequestHandler->header->status == 200) {
             $authToken = $request->getHeaders()->get('token');
-            yii::error($authToken);
             if ($authToken !== null) {
                 $identity = $user->loginByAccessToken($authToken, get_class($this));
                 if ($identity === null) {

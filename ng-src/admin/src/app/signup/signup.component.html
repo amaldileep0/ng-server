@@ -10,6 +10,7 @@
                             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             <div *ngIf="submitted && f.email.errors" class="has-error">
                             <div *ngIf="f.email.errors.required"><p class="help-block">Email is required</p></div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
                         </div>
                     </div>
                     <div class="form-group">

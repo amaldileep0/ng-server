@@ -9,7 +9,9 @@ use common\models\User;
 use api\controllers\ApiBaseController;
 use api\modules\v1\components\responses\ApiResponse;
 use common\models\RegisterForm;
+use common\models\Profile;
 use yii\web\NotFoundHttpException;
+use AppInstance;
 
 class UserController extends ApiBaseController
 {	
@@ -110,11 +112,19 @@ class UserController extends ApiBaseController
 		$return = [];
 		$user = $this->findModel($id);
 		if ($user) {
-			$return['user']['id'] = $user['id'];
-	        $return['user']['email'] = $user['email'];
-	        $return['user']['firstName'] = $user['first_name'];
-	        $return['user']['lastName'] = $user['last_name'];
-	        $return['user']['createdAt'] = date('d-M-Y H:i:s',$user['created_at']);
+			$profile = $user->profile;
+			$return['user']['id'] = $user->id;
+	        $return['user']['email'] = $user->email;
+	        $return['user']['firstName'] = $user->first_name;
+	        $return['user']['lastName'] = ($user->last_name) ? $user->last_name : "Not avialable";
+	        $return['user']['createdAt'] = date('d-M-Y H:i:s',$user->created_at);
+	        
+	        $return['user']['age'] = isset($profile->age) ? $profile->age : "" ;
+	        $return['user']['image'] = isset($profile->image) ? $profile->image : ""; 
+	        $return['user']['gender'] = isset($profile->gender) ? $profile->gender : "";
+	        $return['user']['dob'] = isset($profile->dob) ? date('Y-m-d',$profile->dob) : "";
+	        $return['user']['address'] = isset($profile->address) ? $profile->address : "";
+	        
 	        $this->statusCode = 200;
 	        $this->message = "";
 	        $this->data = $return;
@@ -129,30 +139,53 @@ class UserController extends ApiBaseController
 	{
 		$bodyparams = Yii::$app->getRequest()->getBodyParams();
 		if ($bodyparams['id']) {
-			$user = $this->findModel($bodyparams['id']);
-			if($user) {
-				$user->email = $bodyparams['email'];
-				$user->first_name = $bodyparams['firstName'];
-				$user->last_name = $bodyparams['lastName'];
-				if($user->update()){
-					$this->statusCode = 200;
-					$this->message = "Updated successful.";
-					$this->data = new \stdClass();
-				} else {
-					$error = $user->getErrors();
-					if ($error) {
-						$this->statusCode = 400;
-						$this->message = "Validation failed";
-						$this->data = ['error' => $error ];
-					} else {
+			$transaction = \AppInstance::beginTransaction();
+			try {
+				$user = $this->findModel($bodyparams['id']);
+				if($user) {
+					$profile = $user->profile;
+					if(!$profile) {
+						$profile = new Profile();
+						$profile->user_id = $user->id;
+					}
+					$user->email = $bodyparams['email'];
+					$user->first_name = $bodyparams['firstName'];
+					$user->last_name = $bodyparams['lastName'];
+					
+					$profile->age = $bodyparams['age'];
+					$profile->address = $bodyparams['address'];
+					$profile->gender = $bodyparams['gender'];
+					$profile->dob = ($bodyparams['dob']) ? strtotime(implode('-', $bodyparams['dob'])) : null;
+					if ($profile->save() && $user->save()) {
+						$transaction->commit();
 						$this->statusCode = 200;
 						$this->message = "Updated successful.";
 						$this->data = new \stdClass();
+					} else {
+						$transaction->rollback();
+						$error1 = $user->getErrors();
+						$error2 = $profile->getErrors();
+
+						if ($error1 || $error2) {
+							$this->statusCode = 400;
+							$this->message = "Validation failed";
+							$this->data = ['error' => array_merge($error1,$error2) ];
+						} else {
+							$this->statusCode = 200;
+							$this->message = "Updated successfully.";
+							$this->data = new \stdClass();
+						}
 					}
+				} else {
+					$this->statusCode = 404;
+					$this->message = "The requested user does not exist.";
+					$this->data = new \stdClass();
 				}
-			} else {
-				$this->statusCode = 404;
-				$this->message = "The requested user does not exist.";
+				
+			} catch (Exception $e) {
+				$transaction->rollback();
+				$this->statusCode = 500;
+				$this->message = "Someting went wrogn while saving user";
 				$this->data = new \stdClass();
 			}
 		} else {

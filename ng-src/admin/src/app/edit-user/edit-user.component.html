@@ -1,40 +1,99 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="'User Edit'" [icon]="'fa-edit'"></app-page-header>
-    <div class="row">
-        <div class="col-lg-6">
-            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-                <fieldset class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                            <input type="text" formControlName="email" placeholder="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                            <div *ngIf="submitted && f.email.errors" class="has-error">
-                                <div *ngIf="f.email.errors.required">
-                                    <p class="help-block help-block-error">Email cannot be blank</p>
-                                </div>
-                            </div>
-                </fieldset>
-                <fieldset class="form-group">
-                  <label for="exampleInputEmail1">First Name</label>
-                      <input type="text" formControlName="firstName" placeholder="First Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-                          <div *ngIf="submitted && f.firstName.errors" class="has-error">
-                              <div *ngIf="f.firstName.errors.required">
-                                    <p class="help-block help-block-error">First Name cannot be blank</p>
-                              </div>
-                          </div>
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="exampleInputEmail1">Last Name</label>
-                            <input type="text" formControlName="lastName" placeholder="Last Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-                            <div *ngIf="submitted && f.lastName.errors" class="has-error">
-                                <div *ngIf="f.lastName.errors.required">
-                                    <p class="help-block help-block-error">Last Name is required</p>
-                                </div>
-                            </div>
-                </fieldset>
-                <button [disabled]="loading" class="btn btn-success">Save</button>
-                &nbsp;<button type="reset" class="btn btn-primary">Reset Button</button>
-                &nbsp;<a [routerLink]="['/users']" class="btn btn-danger">Cancel</a>
+        <app-page-header [heading]="'User Edit'" [icon]="'fa-edit'"></app-page-header>
+        <div class="row">
+           <div class="col-lg-6">
+              <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+              <fieldset class="form-group">
+                 <label for="exampleInputEmail1">Email address</label>
+                 <input type="text" formControlName="email" placeholder="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                 <div *ngIf="submitted && f.email.errors" class="has-error">
+                    <div *ngIf="f.email.errors.required">
+                       <p class="help-block help-block-error">Email cannot be blank</p>
+                    </div>
+                    <div *ngIf="f.email.errors.email">
+                       <p class="help-block help-block-error">Email must be a valid email address</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="exampleInputEmail1">First Name</label>
+                 <input type="text" formControlName="firstName" placeholder="First Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                 <div *ngIf="submitted && f.firstName.errors" class="has-error">
+                    <div *ngIf="f.firstName.errors.required">
+                       <p class="help-block help-block-error">First Name cannot be blank</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="exampleInputEmail1">Last Name</label>
+                 <input type="text" formControlName="lastName" placeholder="Last Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                 <div *ngIf="submitted && f.lastName.errors" class="has-error">
+                    <div *ngIf="f.lastName.errors.required">
+                       <p class="help-block help-block-error">Last Name is required</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="exampleInputAge">Age</label>
+                 <input type="number" formControlName="age" placeholder="Age" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
+                 <div *ngIf="submitted && f.age.errors" class="has-error">
+                    <div *ngIf="f.age.errors.required">
+                       <p class="help-block help-block-error">Age is required</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="exampleInputAge">Date Of Birth</label>
+                 <div class="input-group datepicker-input">
+                    <input class="form-control" placeholder="yyyy-mm-dd" formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" ngbDatepicker #d="ngbDatepicker"/>
+                    <button class="input-group-addon" (click)="d.toggle()" type="button"><span class="fa fa-calendar"></span></button>
+                    <div *ngIf="submitted && f.dob.errors" class="has-error">
+                       <div *ngIf="f.dob.errors.required">
+                          <p class="help-block help-block-error">Dob is required</p>
+                       </div>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="gender">Gender - </label>
+                    <label class="radio-inline">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" formControlName="gender" id="optionsRadiosfemale" value="female" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"> Female
+                    </label>
+                    <label class="radio-inline">
+                     &nbsp;&nbsp;<input type="radio" formControlName="gender" id="optionsRadiosmale" value="male" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" > Male
+                    </label>
+                    <label class="radio-inline">
+                    &nbsp;&nbsp;<input type="radio" formControlName="gender" id="optionsRadiosother" value="other" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"> Other
+                    </label>
+                    <div *ngIf="submitted && f.gender.errors" class="has-error">
+                       <div *ngIf="f.gender.errors.required">
+                          <p class="help-block help-block-error">Gender is required</p>
+                       </div>
+                    </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label>Address</label>
+                 <textarea class="form-control" formControlName="address" rows="3" [ngClass]="{ 'is-invalid': submitted && f.address.errors }"></textarea>
+                 <div *ngIf="submitted && f.address.errors" class="has-error">
+                    <div *ngIf="f.address.errors.required">
+                       <p class="help-block help-block-error">Address is required</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <fieldset class="form-group">
+                 <label for="exampleInputFile">Profile Picture</label>
+                 <input type="file" class="form-control-file" id="exampleInputFile" formControlName="image"  [ngClass]="{ 'is-invalid': submitted && f.image.errors }"/>
+                 <div *ngIf="submitted && f.image.errors" class="has-error">
+                    <div *ngIf="f.image.errors.required">
+                       <p class="help-block help-block-error">Image is required</p>
+                    </div>
+                 </div>
+              </fieldset>
+              <button [disabled]="loading" class="btn btn-success">Save</button>
+              &nbsp;<button type="reset" class="btn btn-primary">Reset Button</button>
+              &nbsp;<a [routerLink]="['/users']" class="btn btn-danger">Cancel</a>
               </form>
+           </div>
         </div>
-    </div>
-    <!-- /.row -->
-</div>
+        <!-- /.row -->
+        </div>

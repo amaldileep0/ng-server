@@ -41,6 +41,10 @@ class AppInstance extends Object
         self::$uniqueId = rand(1000, 2000000000);
 
     }
+    public static function beginTransaction($isolationLevel = null, $options = null)
+    {
+        return \Yii::$app->db->beginTransaction($isolationLevel);
+    }
 
     public static function beforeRun()
     {
