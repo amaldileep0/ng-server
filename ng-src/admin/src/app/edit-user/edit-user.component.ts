@@ -17,6 +17,7 @@ export class EditUserComponent implements OnInit, OnDestroy {
   loading: boolean = false;
   submitted: boolean = false;
   returnUrl: string;
+  imageUrl: '';
   
   constructor(  
     private userService: UserService,
@@ -83,6 +84,16 @@ export class EditUserComponent implements OnInit, OnDestroy {
                 error => {
                     this.loading = false;
                 });
+  }
+  onSelectFile(event) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.imageUrl = event.target.result;
+      }
+    }
   }
 
 }

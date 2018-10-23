@@ -92,7 +92,8 @@ $topnav-background-color: rgb(33, 88, 7);
         border-radius: 50%;
         border: 2px solid #fff;
     }
-    .has-error .help-block,
+}
+.has-error .help-block,
     .has-error .control-label,
     .has-error .radio,
     .has-error .checkbox,
@@ -103,7 +104,7 @@ $topnav-background-color: rgb(33, 88, 7);
     .has-error.radio-inline label,
     .has-error.checkbox-inline label {
         color: #f52323;
-        font-size: 24px;
+        font-size: 18px;
     }
     .has-error .form-control {
         border-color: #f07d7d;
@@ -129,4 +130,3 @@ $topnav-background-color: rgb(33, 88, 7);
         margin-bottom: 10px;
         color:#646161;
     }
-}
