@@ -28,7 +28,7 @@ class ApiBaseController extends \yii\rest\Controller
                 // restrict access to
                 'Origin' => ['http://localhost:4200'], 
                 // Allow only POST and PUT methods
-                'Access-Control-Request-Method' => ['GET', 'POST','OPTIONS','DELETE'],
+                'Access-Control-Request-Method' => ['GET', 'POST','OPTIONS','DELETE','PUT'],
                  // Allow only headers 'X-Wsse'
                 'Access-Control-Request-Headers' => ['*'],
                 // Allow credentials (cookies, authorization headers, etc.) to be exposed to the browser

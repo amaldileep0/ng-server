@@ -18,7 +18,7 @@ export class MessageComponent implements OnInit, OnDestroy {
     }
     ngOnInit() {
         this.subscription = this.messageService.getMessage().subscribe(message => {
-            //fix it to handle array of errors(push).
+            //@To Do fix it to handle array of errors(push).
             this.alerts = message;
     });
     }

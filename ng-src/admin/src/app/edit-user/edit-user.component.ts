@@ -1,4 +1,4 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit,OnDestroy} from '@angular/core';
 import { UserService } from "../shared/services/user.service";
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,6 +18,7 @@ export class EditUserComponent implements OnInit, OnDestroy {
   submitted: boolean = false;
   returnUrl: string;
   imageUrl: '';
+  selectedFile : File;
   
   constructor(  
     private userService: UserService,
@@ -74,8 +75,16 @@ export class EditUserComponent implements OnInit, OnDestroy {
         return;
     }
     this.loading = true;
-    let formData = this.editForm.value;
-    this.userService.editUser(formData)
+    const formData = new FormData();
+    formData.append('firstName',this.f.firstName.value)
+    formData.append('lastName',this.f.lastName.value)
+    formData.append('gender',this.f.gender.value)
+    formData.append('image',this.selectedFile,this.selectedFile.name)
+    formData.append('address',this.f.address.value)
+    formData.append('age',this.f.age.value)
+    formData.append('dob',JSON.stringify(this.f.dob.value))
+    formData.append('email',this.f.email.value)
+    this.userService.editUser(formData,+this.f.id.value)
             .pipe(first())
             .subscribe(
                 data => {
@@ -87,13 +96,12 @@ export class EditUserComponent implements OnInit, OnDestroy {
   }
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-      reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-      reader.onload = (event) => { // called once readAsDataURL is completed
-        this.imageUrl = event.target.result;
+      this.selectedFile = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imageUrl = reader.result;
       }
+      reader.readAsDataURL(this.selectedFile);
     }
   }
-
 }

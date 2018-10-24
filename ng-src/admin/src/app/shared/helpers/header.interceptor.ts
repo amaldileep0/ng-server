@@ -18,8 +18,7 @@ export class HeaderInterceptor implements HttpInterceptor {
             request = request.clone({
                 setHeaders: { 
                     token: `${currentUser.token}`,
-                    'timezone': 'asia/kolkota',
-                    'Content-Type': 'application/json'
+                    'timezone': 'asia/kolkota'
                 }
             });
         }

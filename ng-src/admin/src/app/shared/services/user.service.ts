@@ -25,8 +25,7 @@ export class UserService {
     const url = `${'http://ng-server.api.com/v1/user/delete'}/${id}`; 
     return this.http.delete(url)
   }
-  editUser(user: User) {
-    return this.http.post(`http://ng-server.api.com/v1/user/edit`, user);
+  editUser(formData: any,id: number) {
+    return this.http.post(`${'http://ng-server.api.com/v1/user/edit'}/${id}`, formData);
   }
-
 }

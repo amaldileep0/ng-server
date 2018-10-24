@@ -21,6 +21,7 @@ return [
             'enableCookieValidation' => false,
                 'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
+                'multipart/form-data' => 'yii\web\MultipartFormDataParser'
             ],
         ],
         'response' => [
@@ -64,6 +65,9 @@ return [
             'showScriptName' => false,
             'rules'=>[
                 'v1/user/delete/<id:\d+>' => 'v1/user/delete',
+                'v1/user/edit/<id:\d+>' => 'v1/user/edit',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ]
         ],     
     ],

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "profile".
@@ -36,7 +37,8 @@ class Profile extends \yii\db\ActiveRecord
             [['user_id'], 'required'],
             [['user_id', 'age', 'dob'], 'integer'],
             [['gender'], 'string'],
-            [['image', 'address'], 'string', 'max' => 150],
+            [['address'], 'string', 'max' => 150],
+            [['image'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
             [['user_id'], 'unique'],
             [['id'], 'unique'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
@@ -74,5 +76,23 @@ class Profile extends \yii\db\ActiveRecord
     public static function find()
     {
         return new \common\models\Query\ProfileQuery(get_called_class());
+    }
+
+    public function upload()
+    {
+        if ($this->validate()) {
+            $path = Yii::getAlias('@service');
+            $target_dir = "/profileImages/";
+            $filePath = $path.$target_dir;
+            if (!file_exists($filePath)) {
+                mkdir($filePath, 0777, true);
+            }
+            $filename = $target_dir.$this->image->baseName . '.' . $this->image->extension;
+            if ($this->image->saveAs($path.$filename)) {
+                return ['status' => true, 'path' => $filename];    
+            }
+        } 
+        return ['status' => false, 'path' => ''];
+    
     }
 }

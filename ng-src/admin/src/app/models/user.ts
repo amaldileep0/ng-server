@@ -5,4 +5,8 @@ export class User {
     firstName: string;
     lastName: string;
     createdAt:string;
+    address:string;
+    dob:string;
+    age:number;
+    image:string;
 }

@@ -81,7 +81,7 @@
                  </div>
               </fieldset>
               <fieldset class="form-group">
-                        <img [src]="imageUrl || '/assets/images/default-user.png'" height="150" width="150"> <br/>
+                  <img [src]="imageUrl || '/assets/images/default-user.png'" height="150" width="150"> <br/>
                  <label for="exampleInputFile">Profile Picture</label>
                  <input type="file" class="form-control-file" id="exampleInputFile" (change)="onSelectFile($event)" formControlName="image"  [ngClass]="{ 'is-invalid': submitted && f.image.errors }"/>
                  <div *ngIf="submitted && f.image.errors" class="has-error">
