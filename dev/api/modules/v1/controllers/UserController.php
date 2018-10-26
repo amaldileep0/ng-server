@@ -92,6 +92,11 @@ class UserController extends ApiBaseController
 	public function actionDelete($id)
 	{
 		$user = $this->findModel($id);
+		$profile = $user->profile;
+
+		if($profile)
+			$profile->delete();
+		
 		if($user->delete()) {
 			$auth = \Yii::$app->authManager;
 			$auth->revokeAll($id);
